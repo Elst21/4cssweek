@@ -1,1 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+
+}
+
+header {
+    background: no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    padding: 30px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+.container {
+    width: auto;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1,5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+p {
+    font-size: 1,5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.section {
+    width: 90vw;
+    height: 80vh;
+    margin: 2em;
+    background: #4a4a4a; 
+    position: relative;
+    display: flex;
+ }
+ .container2 {
+     height: 100%;
+     width: 20%;
+ }
+ .img {
+     width: 100%;
+     height: 100%;
+     background-size: cover;
+     position: absolute;
+     top: 0;
+     left: 0;
+     /* z-index: 1; */
+     opacity: 0;
+     transition: opacity 2s;
+ }
+
+
+.i0{ 
+    background-image: url('aircraft6.jpg');
+    opacity: 1;
+}
+.i1{
+    background-image: url('aircraft7.png');
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position:absolute;
+}
+/* .container:hover .img {
+    z-index: 10;
+} */
+.container2:hover .img {
+    opacity: 1;
+}
+
+nav {
+    position: fixed;
+    top:0;
+    width: 90vw;
+    text-align: center;
+    background: rgb(250, 251, 250);
+
+}
+nav ul {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 2px 25px;
+    font-size: 1,5em;
+    text-transform;
+    display: inline-block;
+}
+
+.aircraft-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.aircraft-card {
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(30% - 2rem);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+
+.section2 {
+    position: relative;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+@media (max-width: 768px) {
+    .menu {
+      display: none; /* скрыть меню */
+    }
+  
+    .menu-toggle {
+      display: block; /* показать кнопку гамбургера */
+    }
+  
+    .menu.active {
+      display: block; /* показать меню при активации */
+    }
+  }
 
