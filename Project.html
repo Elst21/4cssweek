@@ -1,89 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Презентация нового самолета✈️</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        *::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        *::-webkit-scrollbar{
+            width: 4px;
+            background-color: rgba(112, 239, 189, 0.4);
+            border-radius: 2px;
+        }
+
+        *::-webkit-scrollbar-thumb{
+            background-color: rgba(55, 55, 55, 0.4);
+            border-radius: 2px;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            max-height: calc(100vw / 2);
+            position:relative;
+            font-size: calc(100vw / 100);
+        }
+        .hero h1{
+            position: absolute;
+            width: 100%;
+            line-height: 2rem;
+            height: 2rem;
+            top: calc(100vw /4  - 1rem);
+            text-align: center;
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 3px black;
+        }
+        .c {
+            height: 50%;
+            width: 100%;
+        }
+        .img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* z-index: 1; */
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        .i0{
+            background-image: url('aircraft7.png');
+            opacity: 1;
+        }
+        .i1{
+            background-image: url('aircraft6.jpg');
+        }
+        .btn {
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            position: relative;
+        }
+        .c:hover .img {
+            opacity: 1;
+        }
+        
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-        <h1>Добро пожаловать на презентацию нового самолета</h1>
-        <p>Откройте новые горизонты с нашим новым самолетом, который сочетает в себе скорость и комфорт.</p> 
-    </div>
-        <nav>
-            <ul>
-                <a href="#about">О самолете</a>
-                <a href="#pattern">Характеристики</a>
-                <a href="#review">Отзывы</a>
-                <a href="#contacts">Форма регистрации</a>
-            </ul>
-        </nav>
-    </header>      
-    <main>
-            <div class="section">
-                <div class="container2">
-                    <div class="img i0"></div>
-                    <div class="btn"></div>
+<body class="bg-blue-100">
+    <!-- Навигационное меню -->
+    <div class="bg-blue-100 shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="text-xl font-bold">Самолет</div>
+                <div class="md:hidden">
+                    <button id="menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div class="container2">
-                    <div class="img i1"></div>
-                    <div class="btn"></div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="text-gray-700 hover:text-blue-500">Главная</a>
+                    <a href="#features" class="text-gray-700 hover:text-blue-500">Характеристики</a>
+                    <a href="#registration" class="text-gray-700 hover:text-blue-500">Тестовый полет</a>
+                </div>
             </div>
         </div>
-    </main>
-    <main2>
-        <section2 id="about">
-            <h2>О самолете</h2>
-            <p>Eviation Alice — электрический самолет, рассчитанный на девять пассажиров и двух членов экипажа. Его конструкция, впервые разработанная в Израиле, на 95% состоит из композитных материалов, приводится в действие двумя электродвигателями и имеет Т-образное хвостовое оперение.</p>
-            <img src="aircraft1.jpg" alt="Boeing 737"> 
-        </section2>
+    </div>
 
-        <section2 id="pattern">
-            <h2>Характеристики</h2>
-                    <p>Крейсерская скорость (км/ч) 407</p>
-                    <p>Дальность (км) 460</p>
-                    <p>Максимальная высота полета (м) 9 753</p>
-                    <p>Длина самолета (м) 17,4</p>
-                    <p>Высота самолета (м) 3,84</p> 
-                    <p>Размах крыла (м) 19,2</p>
-                    <p>Максимальный взлетный вес (кг) 6 350</p> 
-                    <p>Максимальное число пассажиров 9</p> 
-        </section2>
+    <main>
+    <div id="home"> 
+<div class="bg-gradient-to-br from-blue-100 to-indigo-200">
+        <div id="hero" class="hero">
+            <div class="c">
+                <div class="img i0"></div>
+                <div class="btn"></div>
+            </div>
+            <div class="c">
+                <div class="img i1"></div>
+                <div class="btn"></div>
+            </div>
+            <h1>Добро пожаловать!<p>Познайте новое слово в мире авиации.</p></h1>  
+        </div>
+<!-- Карточки с характеристиками -->
+<section>
+<div id="features" class="container mx-auto my-10 py-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Характеристики самолета</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+            <h3 class="text-xl font-semibold mb-2">Скорость</h3>
+            <p class="text-gray-700">Максимальная скорость: 900 км/ч.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+            <h3 class="text-xl font-semibold mb-2">Дальность полета</h3>
+            <p class="text-gray-700">Мах. расстояние: 12,000 км.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 fade-in">
+                    <h3 class="text-xl font-semibold mb-2">Вместимость</h3>
+                    <p class="text-gray-700">До 180 пассажиров.</p>
+                </div>
+            </div>
+        </section>
 
-        <section2 id="review">
-            <h2>Отзывы</h2>
-            <p>⭐️⭐️⭐️</p>
-            <p>Вот такой необычный и симпатичный самолетик готовится к первому полёту</p>
-            <p>⭐️⭐️⭐️</p>
-            <p>Обещают дальность 800 км, 460 км/ч крейсерской скорости, 9 пассажиров или 1100 кг груза.</p>  
-            <p>⭐️⭐️⭐️</p>
-            <p>Полностью электрический. Не первый (есть например, Pipistrel Alpha Electro), но первый среди самолетов такого размера.</p>
-        </section2>
-
-        <section2 id="contacts">
-            <h2>Форма регистрации</h2>
-                        <label for="username">Логин:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Пароль:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <button type="submit">Войти</button>
-        </section2>
-
-
-    </main2>
-
-        
-
-    
        
-    
 
- 
-    
+        <br><br>
+        
+        <div id="form">
+            <div class="min-h-screen flex items-center justify-center p-6">
+                <div class="bg-white/30 backdrop-blur-xl shadow-2xl rounded-2xl max-w-2xl w-full p-8 border border-white/20">
+                  <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4">Свяжитесь с нами</h2>
+                    <p class="text-blue-800 opacity-80">Заполните форму, и мы с вами свяжемся</p>
+                  </div>
+              
+                  <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                      <!-- Контакт -->
+                      <div>
+                        <label class="block text-blue-900 mb-2">Контактный телефон</label>
+                        <input 
+                          type="tel" 
+                          placeholder="+7 (___) ___-__-__"
+                          class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                        >
+                      </div>
+              
+                      <!-- Дата -->
+                      <div>
+                        <label class="block text-blue-900 mb-2">Желаемая дата</label>
+                        <input 
+                          type="date" 
+                          class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                        >
+                      </div>
+                    </div>
+              
+                    <!-- Время -->
+                    <div>
+                      <label class="block text-blue-900 mb-2">Желаемое время</label>
+                      <select 
+                        class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                      >
+                        <option>Утро (9:00 - 12:00)</option>
+                        <option>День (12:00 - 15:00)</option>
+                        <option>Вечер (15:00 - 18:00)</option>
+                      </select>
+                    </div>
+              
+                    <!-- Электронная почта -->
+                    <div>
+                      <label class="block text-blue-900 mb-2">Электронная почта</label>
+                      <input type="email" id="email"
+                        rows="4"
+                        placeholder="Ваш email"
+                        class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                      >
+                    </div>
+                    <!-- Имя -->
+                    <div>
+                        <label class="block text-blue-900 mb-2">Ваше имя</label>
+                        <input type="text" id="name" 
+                          rows="4"
+                          placeholder="Ваше имя"
+                          class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                        >
+                      </div><!-- Комментарий -->
+                      <div>
+                        <label class="block text-blue-900 mb-2">Ваш комментарий</label>
+                        <textarea 
+                          rows="4"
+                          placeholder="Введите дополнительную информацию..."
+                          class="w-full px-4 py-3 bg-white/50 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-blue-900"
+                        ></textarea>
+                      </div>
+              
+                    <!-- Кнопка -->
+                    <div class="text-center">
+                      <button 
+                        type="submit" 
+                        class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-105"
+                      >
+                        Отправить запрос
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+        </div>
+
+        </section>
+   
 </body>
 </html>
