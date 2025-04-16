@@ -85,31 +85,20 @@
         
     </style>
 </head>
-<body class="bg-blue-100">
-    <!-- Навигационное меню -->
-    <div class="bg-blue-100 shadow-md fixed w-full z-10">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <div class="text-xl font-bold">Самолет</div>
-                <div class="md:hidden">
-                    <button id="menu-button" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="#home" class="text-gray-700 hover:text-blue-500">Главная</a>
-                    <a href="#features" class="text-gray-700 hover:text-blue-500">Характеристики</a>
-                    <a href="#registration" class="text-gray-700 hover:text-blue-500">Тестовый полет</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="bg-gray-200">
+  <!-- Навигационное меню -->
+  <header>
+    <div class="bg-gray-200 text-white h-16 py-4 fixed top-0 left-0 z-50 w-full">
+      <div class="bg-gray-200 flex justify-start flex-wrap items-center gap-4 text-xl font-semibold px-8">
+        <a href="#home" class="text-gray-700 hover:text-blue-500">Главная</a>
+        <a href="#features" class="text-gray-700 hover:text-blue-500">Характеристики</a>
+        <a href="#registration" class="text-gray-700 hover:text-blue-500">Тестовый полет</a>
+      </div>
+    </div>  
+  </header>
 
     <main>
-    <div id="home"> 
-<div class="bg-gradient-to-br from-blue-100 to-indigo-200">
+    <div id="home" class="bg-gradient-to-br from-blue-100 to-indigo-200">
         <div id="hero" class="hero">
             <div class="c">
                 <div class="img i0"></div>
@@ -121,6 +110,7 @@
             </div>
             <h1>Добро пожаловать!<p>Познайте новое слово в мире авиации.</p></h1>  
         </div>
+    </div>
 <!-- Карточки с характеристиками -->
 <section>
 <div id="features" class="container mx-auto my-10 py-10">
@@ -145,7 +135,7 @@
 
         <br><br>
         
-        <div id="form">
+        <div id="registration">
             <div class="min-h-screen flex items-center justify-center p-6">
                 <div class="bg-white/30 backdrop-blur-xl shadow-2xl rounded-2xl max-w-2xl w-full p-8 border border-white/20">
                   <div class="text-center mb-8">
@@ -230,6 +220,8 @@
         </div>
 
         </section>
+
+        
    
 </body>
 </html>
